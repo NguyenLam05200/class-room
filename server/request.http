@@ -1,0 +1,67 @@
+// Test missing email
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "holohoi",
+    "password": "holohoi"
+}
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "holohoi",
+    "email": "holohoi05200@gmail.com",
+    "password": "holohoi"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "holohoi05200@gmail.co",
+    "password": "holohoi"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg5ODNiZmE1YjA1ODgyYzliOGU0NjkiLCJpYXQiOjE2MzY0MDIxOTl9.0SVhzT5VIvwdNfdzZAcf3G3bqHXmnOuDhoBWiSbusBg
+
+{
+    "title":"React",
+    "description":"React js",
+    "url":"react.com",
+    "status": "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg5ODNiZmE1YjA1ODgyYzliOGU0NjkiLCJpYXQiOjE2MzY0Nzc1MzF9.-aMzl5tGXLFpDTY00aQU5bUESI7KcP5zc2q6uUEbxks
+
+
+###
+
+PUT http://localhost:5000/api/posts/6189843fa5b05882c9b8e46c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg5ODNiZmE1YjA1ODgyYzliOGU0NjkiLCJpYXQiOjE2MzY0Nzc1MzF9.-aMzl5tGXLFpDTY00aQU5bUESI7KcP5zc2q6uUEbxks
+
+{
+    "title": "Vue",
+    "description": "VUEEEE",
+    "url":"https://vuejs.org",
+    "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/6189843fa5b05882c9b8e46c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTg5ODNiZmE1YjA1ODgyYzliOGU0NjkiLCJpYXQiOjE2MzY0Nzc1MzF9.-aMzl5tGXLFpDTY00aQU5bUESI7KcP5zc2q6uUEbxks
